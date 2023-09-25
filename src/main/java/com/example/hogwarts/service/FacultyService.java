@@ -34,7 +34,6 @@ public class FacultyService {
     public Collection<Faculty> getAll() {
         return facultyRepository.findAll();
     }
-
     public Faculty remove(Long id) {
         Faculty faculty = facultyRepository.findById(id).orElseThrow(FacultyNotFoundException::new);
         facultyRepository.delete(faculty);
