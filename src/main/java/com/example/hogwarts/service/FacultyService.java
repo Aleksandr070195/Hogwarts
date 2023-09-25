@@ -26,7 +26,6 @@ public class FacultyService {
         existingFaculty.setName(faculty.getName());
         return facultyRepository.save(existingFaculty);
     }
-
     public Faculty getById(Long id) {
         return facultyRepository.findById(id).orElseThrow(FacultyNotFoundException::new);
     }

@@ -6,7 +6,6 @@ import com.example.hogwarts.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-
 @Service
 public class StudentService {
     private final StudentRepository studentRepository;
