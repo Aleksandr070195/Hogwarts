@@ -44,4 +44,15 @@ public class FacultyController {
     public Collection<Faculty> getAllByColor(@RequestParam("color") String color) {
         return service.getAllByColor(color);
     }
+
+    @GetMapping("/by-color-or-name")
+    public Collection<Faculty> filteredByColorOrName(@RequestParam String colorOrName) {
+        return service.getAllByNameOrColor(colorOrName, colorOrName);
+    }
+
+    @GetMapping("/by-student")
+    public Faculty getByStudent(Long studentId) {
+        return service.getByStudentId(studentId);
+
+    }
 }
